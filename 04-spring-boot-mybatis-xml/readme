@@ -1,0 +1,29 @@
+mybatis:
+  config-locations: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+spring:
+  datasource:
+     driverClassName: com.mysql.jdbc.Driver
+     url: jdbc:mysql://192.168.0.108:3306/springboot?useUnicode=true&characterEncoding=utf-8
+     username: kaifa
+     password: fuzhaohui
+
+
+#datasource:
+#  driver-class-name: org.mariadb.jdbc.Driver
+#  url: jdbc:mysql://192.168.91.137:3306/sharding_test?serverTimezone=Hongkong&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#  type: com.zaxxer.hikari.HikariDataSource
+#  hikari:
+#    #      driver-class-name: org.mariadb.jdbc.Driver
+#    #      jdbc-url: jdbc:mysql://192.168.91.137:3306/sharding_test?serverTimezone=Hongkong&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#    username: root
+#    password: root
+#    minimum-idle: 5
+#    maximum-pool-size: 50
+#    auto-commit: true
+#    idle-timeout: 30000
+#    pool-name: HikariCpExample
+#    max-lifetime: 1800000
+#    connection-timeout: 30000
+#    connection-test-query: SELECT 1
+

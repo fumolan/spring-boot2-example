@@ -19,7 +19,7 @@ public class UserMapperTest {
 	@Autowired
 	private UserMapper UserMapper;
 
-//	@Test
+	@Test
 	public void testInsert() throws Exception {
 		UserMapper.insert(new UserEntity("aa", "a123456", UserSexEnum.MAN));
 		UserMapper.insert(new UserEntity("bb", "b123456", UserSexEnum.WOMAN));
@@ -27,7 +27,7 @@ public class UserMapperTest {
 		System.out.println(UserMapper.getAll().size());
 	}
 
-//	@Test
+	@Test
 	public void testQuery() throws Exception {
 		List<UserEntity> users = UserMapper.getAll();
 		if (users == null || users.size() == 0) {
@@ -44,6 +44,23 @@ public class UserMapperTest {
 		user.setNickName("gzz");
 		UserMapper.update(user);
 		System.out.println(UserMapper.getOne(1L).getNickName());
+	}
+
+
+	@Test
+	public void testdeleted() throws Exception {
+		List<UserEntity> userss = UserMapper.getAll();
+		if(userss != null && userss.size()>0){
+			UserEntity user = userss.get(0);
+			System.out.println(user.toString());
+			user.setNickName("gzz");
+			System.out.println(user.getNickName());
+			UserMapper.delete(user.getId());
+		}else{
+			System.out.println("没有可操纵的数据");
+		}
+
+
 	}
 
 }

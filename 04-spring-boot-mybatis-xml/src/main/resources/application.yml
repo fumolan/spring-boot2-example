@@ -4,6 +4,6 @@ mybatis:
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: root
+    url: jdbc:mysql://192.168.0.108:3306/springboot?useUnicode=true&characterEncoding=utf-8
+    username: kaifa
+    password: fuzhaohui
